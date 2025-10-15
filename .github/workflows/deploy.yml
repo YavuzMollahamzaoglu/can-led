@@ -34,9 +34,12 @@ jobs:
         env:
           # Optional: provide your API key via repo secret
           VITE_GOOGLE_API_KEY: ${{ secrets.VITE_GOOGLE_API_KEY }}
-          # Build base path for GitHub Pages project site: /<repo-name>/
-          BASE_PATH: /${{ github.event.repository.name }}/
+          # Build base path for custom domain (root). For project site under custom domain use '/'.
+          BASE_PATH: /
         run: npm run build -- --base=$BASE_PATH
+
+      - name: Configure CNAME for custom domain
+        run: echo "canledtr.com" > dist/CNAME
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
