@@ -32,3 +32,5 @@ Yerelde geliştirme, derleme ve GitHub Pages’e dağıtım adımları.
 
 #### Gizli Anahtar (Opsiyonel)
 - AI için `VITE_GOOGLE_API_KEY` i Secrets → Actions → New repository secret olarak ekleyebilirsiniz.
+
+_Deploy test note: Triggering GitHub Actions by updating README._
