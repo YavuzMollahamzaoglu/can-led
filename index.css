@@ -1,0 +1,37 @@
+/* Global enhancements: smooth scrolling, anchor offset for fixed header, and subtle fade-in animations */
+
+/* Smooth scrolling for in-page anchors */
+html {
+	scroll-behavior: smooth;
+}
+
+/* Ensure anchored sections are visible below the fixed header (approx 80px) */
+section[id] {
+	scroll-margin-top: 6rem; /* 96px */
+}
+
+/* Optional: slightly better text rendering */
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Simple fade-in animations used by the hero content */
+@keyframes fade-in-down {
+	0% { opacity: 0; transform: translateY(-10px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-in-up {
+	0% { opacity: 0; transform: translateY(10px); }
+	100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-down {
+	animation: fade-in-down 600ms ease-out both;
+}
+
+.animate-fade-in-up {
+	animation: fade-in-up 700ms ease-out both;
+}
+
